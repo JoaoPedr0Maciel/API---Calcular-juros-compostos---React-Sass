@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz@6..12&display=swap')
+
+*
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+    font-family: 'Nunito Sans', sans-serif
+
+@mixin center
+    display: flex
+    justify-content: center
+    align-items: center
+
+$gradient: linear-gradient(120deg, #E6FAF8, #d4d4d4)
+
+body
+    height: 100vh
+    width: 100%
+    @include center
+    background: $gradient
+    
+
+main
+    height: 600px
+    width: 400px
+    @include center
+    justify-content: start
+    flex-direction: column
+
+    img
+        max-height: 200px
+
+    section
+        background-color: white
+        flex-direction: column
+        width: 400px
+        height: 600px
+        @include center
+        justify-content: start
+        border-radius: 10px
+        padding: 10px
+
+    h1
+        color: #72F951
+        font-family: 'Nunito Sans', sans-serif
+
+#result
+    position: absolute
+
+
+@media (max-width: 400px)
+    main
+        width: 100% 
+        section
+            width: 100% 
+            max-width: 400px 
+            height: auto 
+            flex-direction: column
+
